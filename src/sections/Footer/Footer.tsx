@@ -7,6 +7,7 @@ import socialTelegram from "@/public/svg/social-telegram.svg";
 import socialDiscord from "@/public/svg/social-discord.svg";
 
 import TitleImg from "@/public/svg/footer-bg.svg";
+import TitleImgMobile from "@/public/svg/footer-bg-mobile.svg";
 import Image from "next/image";
 
 const Footer = () => {
@@ -16,6 +17,7 @@ const Footer = () => {
             el.scrollIntoView({ behavior: "smooth" });
         }
     };
+
     return (
         <footer className={styles.footer} id="Footer">
             <div className={styles.footerConatiner}>
@@ -52,16 +54,14 @@ const Footer = () => {
                             href="mailto:token@antix.in"
                             className={styles.mailLink}
                         >
-                            token@antix.in
+                            hello@antix.in
                         </a>
                         <div className={styles.centerLinksWrapper}>
                             <div className={styles.linkWrapper}>
                                 <button onClick={() => handleClick("Advisors")}>
                                     Advisors
                                 </button>
-                                <button
-                                    onClick={() => handleClick("Token")}
-                                >
+                                <button onClick={() => handleClick("Token")}>
                                     ANTIX Token
                                 </button>
                                 <button
@@ -79,7 +79,9 @@ const Footer = () => {
                                 <button onClick={() => handleClick("Team")}>
                                     Team
                                 </button>
-                                <button onClick={() => handleClick("FeaturedIn")}>
+                                <button
+                                    onClick={() => handleClick("FeaturedIn")}
+                                >
                                     Partners
                                 </button>
                             </div>
@@ -88,13 +90,8 @@ const Footer = () => {
                                 <button onClick={() => handleClick("RoadMap")}>
                                     Road map
                                 </button>
-                                <button
-                                    onClick={() => handleClick("JoinUs")}
-                                >
+                                <button onClick={() => handleClick("JoinUs")}>
                                     Community
-                                </button>
-                                <button onClick={() => handleClick("FAQ")}>
-                                    FAQ
                                 </button>
                             </div>
                         </div>
@@ -109,11 +106,15 @@ const Footer = () => {
                         <a href="#" className={styles.bootomLink}>
                             Privacy Policy
                         </a>
+                        <span className={styles.bootomInfoMobile}>© 2024</span>
                         <p className={styles.bootomInfo}>
                             Antix Interactive Inc. All Rights Reserved
                         </p>
                     </div>
                     <span className={styles.bootomInfo}>© 2024</span>
+                </div>
+                <div className={styles.bgTitleMobile}>
+                    <Image src={TitleImgMobile} alt="Antix" draggable={false} />
                 </div>
             </div>
             <div className={styles.bgTitle}>

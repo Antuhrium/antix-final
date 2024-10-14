@@ -13,6 +13,20 @@
 
     backdrop-filter: blur(24px);
     box-shadow: 0px 0px 150px 0px #12fff133;
+
+    @media screen and (max-width: 1280px) {
+        margin-top: 100px;
+        max-width: 650px;
+    }
+    @media screen and (max-width: 960px) {
+        max-width: none;
+        margin: 122px 32px 0;
+        border-radius: 14px;
+    }
+    @media screen and (max-width: 480px) {
+        margin: 100px 16px 0;
+        border-radius: 12px;
+    }
 }
 
 .content {
@@ -24,10 +38,35 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: 1280px) {
+        gap: 25px;
+        border-radius: 8px;
+    }
+    @media screen and (max-width: 960px) {
+        padding: 44px;
+        border-radius: 14px;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    @media screen and (max-width: 480px) {
+        padding: 36px;
+        gap: 44px;
+    }
 }
 
 .left {
     max-width: 500px;
+
+    @media screen and (max-width: 1280px) {
+        max-width: 350px;
+    }
+    @media screen and (max-width: 960px) {
+        max-width: 490px;
+    }
+    @media screen and (max-width: 480px) {
+    }
 }
 
 .title {
@@ -37,6 +76,23 @@
     letter-spacing: -0.02em;
     text-align: left;
     color: #ffffff;
+
+    @media screen and (max-width: 1280px) {
+        font-size: 26px;
+        line-height: 28.44px;
+    }
+    @media screen and (max-width: 960px) {
+        font-size: 43.97px;
+        line-height: 48.85px;
+        text-align: center;
+        max-width: 390px;
+        margin: 0 auto;
+    }
+    @media screen and (max-width: 480px) {
+        max-width: 290px;
+        font-size: 36px;
+        line-height: 40px;
+    }
 }
 
 .desc {
@@ -46,6 +102,22 @@
     line-height: 28px;
     text-align: left;
     color: #ffffff;
+    @media screen and (max-width: 1280px) {
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 19.91px;
+    }
+    @media screen and (max-width: 960px) {
+        font-size: 21.98px;
+        line-height: 34.2px;
+        text-align: center;
+        margin-top: 24px;
+    }
+    @media screen and (max-width: 480px) {
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 28px;
+    }
 }
 
 .button {
@@ -60,4 +132,23 @@
     text-align: center;
     color: #0f0f0f;
     cursor: pointer;
+
+    @media screen and (max-width: 1280px) {
+        width: 150px;
+        padding: 8px;
+        font-size: 10px;
+        line-height: 14.93px;
+    }
+    @media screen and (max-width: 960px) {
+        width: 350px;
+        padding: 24px;
+        font-size: 26.87px;
+        line-height: 18.24px;
+    }
+    @media screen and (max-width: 480px) {
+        font-size: 22px;
+        line-height: 14.93px;
+        padding: 19px;
+        width: 290px;
+    }
 }

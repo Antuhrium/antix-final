@@ -16,6 +16,41 @@
         display: flex;
         flex-direction: column;
     }
+
+    @media screen and (max-width: 1280px) {
+        padding: 30px 0;
+        margin-top: 100px;
+        height: 616px;
+
+        .footerConatiner {
+            max-width: 850px;
+        }
+    }
+    @media screen and (max-width: 960px) {
+        height: fit-content;
+        margin-top: 122px;
+        padding: 23px 32px;
+        background: #000000;
+
+        .footerConatiner {
+            max-width: none;
+            width: 100%;
+            background: #131313bd;
+            border-radius: 24px;
+            padding: 40px 47px;
+            position: relative;
+            overflow: hidden;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        margin-top: 100px;
+        padding: 20px 16px;
+
+        .footerConatiner {
+            border-radius: 20px;
+            padding: 25px;
+        }
+    }
 }
 
 .topWrapper {
@@ -49,6 +84,10 @@
             border-radius: 100px;
             padding: 12px;
 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             img {
                 width: 100%;
                 height: 100%;
@@ -70,6 +109,83 @@
 
         &:hover {
             opacity: 0.8;
+        }
+    }
+
+    @media screen and (max-width: 1280px) {
+        gap: 40px;
+
+        .topItem {
+            gap: 2px;
+        }
+        .smallTitle {
+            font-size: 10px;
+            line-height: 14.93px;
+        }
+        .socials {
+            gap: 12px;
+
+            .socialLink {
+                width: 32px;
+                height: 32px;
+                padding: 10px;
+            }
+        }
+        .mailLink {
+            font-size: 10px;
+            line-height: 14.93px;
+        }
+    }
+
+    @media screen and (max-width: 960px) {
+        flex-direction: column;
+        gap: 34px;
+        .topItem {
+            gap: 20px;
+        }
+        .smallTitle {
+            font-size: 19.54px;
+            line-height: 29.31px;
+            letter-spacing: 0.02em;
+        }
+        .socials {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+
+            .socialLink {
+                width: 50px;
+                height: 50px;
+                padding: 14px;
+            }
+        }
+        .mailLink {
+            font-size: 24.43px;
+            line-height: 21.98px;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        gap: 28px;
+        .topItem {
+            gap: 12px;
+        }
+        .smallTitle {
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+        }
+        .socials {
+            gap: 20px;
+
+            .socialLink {
+                width: 40px;
+                height: 40px;
+                padding: 11px;
+            }
+        }
+        .mailLink {
+            font-size: 20px;
+            line-height: 18px;
         }
     }
 }
@@ -110,17 +226,112 @@
             margin-left: 370px;
         }
     }
+
+    @media screen and (max-width: 1280px) {
+        margin-top: 92px;
+
+        .linkWrapper {
+            button {
+                margin-top: 6px;
+                font-size: 10px;
+                line-height: 14.93px;
+            }
+
+            &:nth-child(2) {
+                margin-left: 250px;
+            }
+            &:nth-child(3) {
+                margin-left: 260px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 960px) {
+        margin-top: 34px;
+
+        display: flex;
+        flex-direction: column;
+
+        .linkWrapper {
+            button {
+                font-size: 14.66px;
+                line-height: 25.65px;
+                letter-spacing: 0.02em;
+            }
+
+            &:nth-child(2) {
+                margin-top: 24px;
+                margin-left: 0;
+            }
+            &:nth-child(3) {
+                margin-top: 24px;
+                margin-left: 0;
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        margin-top: 28px;
+
+        .linkWrapper {
+            button {
+                font-size: 12px;
+                line-height: 21px;
+                letter-spacing: 0.02em;
+            }
+
+            &:nth-child(2) {
+                margin-top: 20px;
+            }
+            &:nth-child(3) {
+                margin-top: 20px;
+            }
+        }
+    }
 }
 
 .bgTitle {
     position: absolute;
     bottom: 110px;
-    left: 0;
     right: 0;
+
+    width: 1920px;
+    height: 526.96px;
+
+    left: 50%;
+    transform: translateX(-50%);
 
     img {
         width: 100%;
         height: auto;
+    }
+
+    @media screen and (max-width: 1280px) {
+        bottom: 77px;
+        width: 1365.33px;
+        height: 374.72px;
+    }
+    @media screen and (max-width: 960px) {
+        display: none;
+    }
+}
+.bgTitleMobile {
+    display: none;
+    @media screen and (max-width: 960px) {
+        display: block;
+        position: absolute;
+        z-index: 0;
+
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        left: 50%;
     }
 }
 
@@ -149,6 +360,51 @@
             }
         }
     }
+
+    @media screen and (max-width: 1280px) {
+        .bootomLinkWrapper {
+            gap: 94px;
+
+            .bootomLink {
+                font-size: 10px;
+                line-height: 14.93px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 960px) {
+        position: relative;
+        z-index: 1;
+        flex-direction: column;
+        max-width: 440px;
+        margin: 88px auto 0;
+
+        .bootomLinkWrapper {
+            text-wrap: nowrap;
+            gap: 18px 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .bootomLink {
+                font-size: 14.66px;
+                line-height: 17.59px;
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        margin-top: 80px;
+
+        .bootomLinkWrapper {
+            gap: 14px 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .bootomLink {
+                font-size: 12px;
+                line-height: 14.4px;
+            }
+        }
+    }
 }
 .bootomInfo {
     color: #686868;
@@ -156,4 +412,45 @@
     font-weight: 400;
     line-height: 21px;
     text-align: center;
+
+    @media screen and (max-width: 1280px) {
+        font-size: 10px;
+        line-height: 14.93px;
+    }
+    @media screen and (max-width: 960px) {
+        position: relative;
+        z-index: 1;
+
+        font-size: 14.66px;
+        line-height: 17.59px;
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        font-size: 10px;
+        line-height: 12px;
+        
+    }
+}
+.bootomInfoMobile {
+    display: none;
+
+    @media screen and (max-width: 960px) {
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        text-wrap: nowrap;
+
+        font-size: 12.21px;
+        line-height: 14.66px;
+
+        color: #686868;
+        text-align: center;
+
+        &:nth-child(2) {
+            margin-top: 18px;
+        }
+    }
 }
