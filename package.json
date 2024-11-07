@@ -9,11 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@metamask/sdk-react": "^0.30.0",
-    "@wagmi/core": "^2.14.1",
-    "@web3modal/ethereum": "^2.7.1",
-    "@web3modal/react": "^2.7.1",
-    "@web3modal/wagmi": "^5.1.11",
     "axios": "^1.7.7",
     "ethers": "^6.13.4",
     "gsap": "^3.12.5",
@@ -24,8 +19,6 @@
     "recharts": "^2.12.7",
     "sass": "^1.79.4",
     "swiper": "^11.1.14",
-    "valtio": "^2.1.0",
-    "wagmi": "^2.12.25",
     "zustand": "^5.0.1"
   },
   "devDependencies": {
