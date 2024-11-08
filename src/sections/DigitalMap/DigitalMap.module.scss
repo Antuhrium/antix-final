@@ -68,7 +68,16 @@
         color: #afafaf;
 
         span {
-            font-weight: 600;
+            margin-bottom: 12px;
+            display: block;
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 21px;
+            color: #12FFF1;
+        }
+
+        &:nth-child(2) span {
+            color: #00A1B2;
         }
     }
 
@@ -79,6 +88,12 @@
         .desc {
             font-size: 10px;
             line-height: 14.93px;
+
+            span {
+                margin-bottom: 7px;
+                font-size: 24px;
+                line-height: 21px;
+            }
         }
     }
     @media screen and (max-width: 960px) {
@@ -89,10 +104,6 @@
             font-size: 17.1px;
             line-height: 25.65px;
             text-align: center;
-
-            span {
-                color: #f0f0f0;
-            }
         }
     }
     @media screen and (max-width: 480px) {

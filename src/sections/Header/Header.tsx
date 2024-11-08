@@ -163,16 +163,16 @@ const Header: React.FC<HeaderProps> = ({ isDashboard }) => {
                         </button>
                     ) : (
                         <>
-                            <button
+                            {/* <button
                                 // onClick={() => window.open("/dashboard", "_parent")}
                                 className={styles.connectButton}
                                 disabled={true}
                             >
                                 Connect Wallet
-                            </button>
+                            </button> */}
                         </>
                     )}
-                    {!isDashboard && (
+                    {/* {!isDashboard && (
                         <button
                             className={styles.userButton}
                             // onClick={() => window.open("/dashboard", "_parent")}
@@ -180,7 +180,7 @@ const Header: React.FC<HeaderProps> = ({ isDashboard }) => {
                         >
                             <Image src={UserIcon} alt="User" />
                         </button>
-                    )}
+                    )} */}
                     {account && (
                         <button className={styles.userButton} onClick={() => setIsDisconnectModal(true)}>
                             <Image src={DisconnectIcon} alt="Disconnect Wallet" width={24} height={24} />

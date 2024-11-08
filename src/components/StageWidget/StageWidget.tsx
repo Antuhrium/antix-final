@@ -137,7 +137,8 @@ export const StageWidget = () => {
                   const isOpen = new Date(targetDate) <= new Date();
 
                   if (isOpen) push("/dashboard");
-                  else window.scrollTo({ top: 0, behavior: "smooth" });
+                  // else window.scrollTo({ top: 0, behavior: "smooth" });
+                  else window.open("https://t.me/antixtoken_bot", "_blank");
                }}
                className={s.buy}
             >
