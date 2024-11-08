@@ -28,8 +28,9 @@ export const links: linksType[] = [
 export const linksDashboard: linksType[] = [
     {
         label: "Dashboard",
-        href: "/dashboard",
-        disabled: false,
+        // href: "/dashboard",
+        href: "",
+        disabled: true,
     },
     {
         label: "Claim",
@@ -68,16 +69,19 @@ export const mobileLinks: mobileLinksType[] = [
     },
     {
         label: "My Account",
-        href: "/dashboard",
+        // href: "/dashboard",
+        href: "/",
         icon: MyAccountIcon,
+        disabled: true
     },
 ];
 
 export const mobileLinksDashboard: mobileLinksType[] = [
     {
         label: "Dashboard",
-        href: "/dashboard",
-        disabled: false,
+        // href: "/dashboard",
+        href: "/",
+        disabled: true,
 
     },
     {

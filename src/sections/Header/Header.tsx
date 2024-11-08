@@ -164,15 +164,20 @@ const Header: React.FC<HeaderProps> = ({ isDashboard }) => {
                     ) : (
                         <>
                             <button
-                                onClick={() => window.open("/dashboard", "_parent")}
+                                // onClick={() => window.open("/dashboard", "_parent")}
                                 className={styles.connectButton}
+                                disabled={true}
                             >
                                 Connect Wallet
                             </button>
                         </>
                     )}
                     {!isDashboard && (
-                        <button className={styles.userButton} onClick={() => window.open("/dashboard", "_parent")}>
+                        <button
+                            className={styles.userButton}
+                            // onClick={() => window.open("/dashboard", "_parent")}
+                            disabled={true}
+                        >
                             <Image src={UserIcon} alt="User" />
                         </button>
                     )}
