@@ -32,9 +32,12 @@ import usePlaceholderStore from '@/stores/usePlaceholderStore';
 
 interface HeaderProps {
     isDashboard?: boolean;
+    isAnalitics?: boolean;
+    activeAnalytics?: "Day" | "All" | "Referral";
+    setActiveAnalytics?: React.Dispatch<React.SetStateAction<"Day" | "All" | "Referral">>
 }
 
-const Header: React.FC<HeaderProps> = ({ isDashboard }) => {
+const Header: React.FC<HeaderProps> = ({ isDashboard, isAnalitics, activeAnalytics, setActiveAnalytics }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);
     const [isDisconnectModal, setIsDisconnectModal] = useState(false);
@@ -83,6 +86,59 @@ const Header: React.FC<HeaderProps> = ({ isDashboard }) => {
     const mobileLinksList = isDashboard ? mobileLinksDashboard : mobileLinks;
 
     const pathName = usePathname()
+
+    if(isAnalitics && activeAnalytics && setActiveAnalytics) {
+        return (
+            <header
+            className={styles.wrapper}
+            ref={headerRef}
+        >
+            <div className={styles.logo}>
+                <Image
+                    src={LogoFull}
+                    alt="Logo"
+                    className={`${styles.logoFull} ${
+                        isOpen ? styles.openLogoFull : ""
+                    }`}
+                />
+                {isDashboard &&  (
+                    <Link href={"/"} className={styles.backToMainButton}>
+                        Back to the Main Page
+                    </Link>
+                )}
+                <Image
+                    src={LogoSmall}
+                    alt="Logo"
+                    className={`${styles.logoSmall} ${
+                        isOpen ? styles.openLogoSmall : ""
+                    }`}
+                />
+            </div>
+            <span className={styles.analyticsTitle}>Analytics</span>
+            <div className={styles.analyticsButtons}>
+                <button
+                    className={`${styles.analyticsButton} ${activeAnalytics === 'Day' ? styles.analyticsButtonActive : ''}`}
+                    onClick={() => setActiveAnalytics('Day')}
+                >
+                    Day
+                </button>
+                <button
+                    className={`${styles.analyticsButton} ${activeAnalytics === 'All' ? styles.analyticsButtonActive : ''}`}
+                    onClick={() => setActiveAnalytics('All')}
+                >
+                    All
+                </button>
+                <button
+                    className={`${styles.analyticsButton} ${activeAnalytics === 'Referral' ? styles.analyticsButtonActive : ''}`}
+                    onClick={() => setActiveAnalytics('Referral')}
+                    disabled={true}
+                >
+                    Referral
+                </button>
+            </div>
+        </header>
+        )
+    }
 
     return (
         <>

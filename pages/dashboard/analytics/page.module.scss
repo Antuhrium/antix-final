@@ -2,8 +2,7 @@
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   height: 100vh;
-   padding: 125px 0 30px 0;
+   padding: 125px 0;
 
    .content {
       margin: 0 auto;
@@ -20,7 +19,56 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+
+            .stageButtons {
+               display: flex;
+               align-items: center;
+               gap: 12px;
+               
+               .stageButton {
+                  background: rgba(87, 87, 87, 0.4);
+                  border-radius: 12px;
+                  padding: 8px 42px;
+
+                  font-size: 16px;
+                  font-weight: 500;
+                  line-height: 24px;
+                  text-align: center;
+                  color: #AFAFAF;
+
+                  &.activeStageButton {
+                     background: #12FFF1;
+                     color: #0F0F0F;
+                  }
+               }
+            }
          }
+
       }
+      .tokenomicsWrapper {
+         width: 100%;
+         
+         .tokenomicsTitle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin: 40px 48px 20px;
+
+            h4 {
+               font-size: 28px;
+               font-weight: 500;
+               line-height: 36px;
+               color: #FFFFFF;
+            }
+         }
+
+         &>div>div>ul>li:nth-child(1) {
+            width: 20%;
+         }
+         &>div>ul>li:nth-child(1) {
+            width: 20%;
+         }
+      }   
    }
 }

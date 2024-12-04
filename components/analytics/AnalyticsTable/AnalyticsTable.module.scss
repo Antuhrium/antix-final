@@ -16,11 +16,15 @@
       line-height: 18.11px;
 
       li {
-         max-width: 120px;
-      }
-
-      li:nth-child(1) {
          width: 120px;
+
+         &:last-child  {
+            text-align: right;  
+         }
+   
+         &:nth-child(1) {
+            width: 50%;
+         }
       }
    }
 
@@ -41,11 +45,16 @@
          display: flex;
          gap: 8px;
          align-items: center;
-         width: 100%;
-         justify-content: flex-end;
+         justify-content: flex-start;
 
+         width: 120px;
+         
+         &:last-child {
+            justify-content: flex-end;
+            text-align: right;  
+         }
          &:nth-child(1) {
-            justify-content: flex-start;
+            width: 50%;
          }
       }
    }
