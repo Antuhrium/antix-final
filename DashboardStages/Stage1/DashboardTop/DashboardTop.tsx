@@ -92,7 +92,7 @@ const DashboardTop = () => {
                     </div>
                 </DashboardCard>
 
-                {Number(balances.usdc) === 0 || Number(balances.usdt) !== 0 ? (
+                {(Number(balances.usdc) !== 0 || Number(balances.usdt) !== 0) && network.value !== 'BASE' ? (
                     <DashboardCard style={{ width: "100%" }}>
                         <div className={styles.balanceTitleWrapper}>
                             <h3 className={styles.balanceTitle}>{t('stage.depositBalance')}</h3>

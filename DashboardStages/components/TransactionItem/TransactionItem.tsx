@@ -6,13 +6,24 @@ import TetherIcon from "/public/svg/tether-icon.svg";
 import BNBIcon from "/public/svg/bnb-icon.svg";
 import USDCIcon from "/public/svg/usdc-icon.svg";
 import ETHIcon from "/public/svg/ether-icon.svg";
+import DEGENIcon from "/public/svg/degen-coin.svg";
+import WETHIcon from "/public/svg/wethera-coin.svg";
+import CBBTCIcon from "/public/svg/cbbtc-coin.svg";
+import MANTRAIcon from "/public/svg/mantra-coin.svg";
+import BASEIcon from '/public/svg/base-chain.svg';
 
 const tokensIcons:any = {
-   BNB  : BNBIcon,
-   USDT : TetherIcon,
-   USDC : USDCIcon,
-   ETH  : ETHIcon
+    BNB  : BNBIcon,
+    USDC : USDCIcon,
+    ETH  : ETHIcon,
+    cbBTC : CBBTCIcon,
+    DEGEN : DEGENIcon,
+    MANTRA : MANTRAIcon,
+    WETH : WETHIcon,
+    BASE : BASEIcon,
+    USDT : TetherIcon,
 }
+
 const tokensSymbols:any = {
    '1_0x0000000000000000000000000000000000000000' :'ETH',
    '1_0xdac17f958d2ee523a2206206994597c13d831ec7' :'USDT',

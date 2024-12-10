@@ -10,6 +10,23 @@
         height: 71.66px;
         background-repeat: no-repeat;
         background-size: contain;
+        position: relative;
+
+        .timerLogos {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .logo {
+                width: 23px;
+                height: 23px;
+            }
+        }
 
         .timerWrapperTitle {
             margin: 20px 88px 20px auto;
@@ -225,6 +242,16 @@
                 .logo {
                     width: 22px;
                     height: 22px;
+                }
+            }
+
+            .timerLogos {
+                left: 10px;
+                gap: 4px;
+    
+                .logo {
+                    width: 16px;
+                    height: 16px;
                 }
             }
         }
