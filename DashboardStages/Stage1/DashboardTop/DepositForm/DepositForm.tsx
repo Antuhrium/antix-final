@@ -4,7 +4,7 @@ import styles from "./DepositForm.module.scss";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import TetherIcon from "/public/svg/tether-icon.svg";
+import USDTIcon from "/public/svg/tether-icon.svg";
 import BNBIcon from "/public/svg/bnb-icon.svg";
 import USDCIcon from "/public/svg/usdc-icon.svg";
 import DEGENIcon from "/public/svg/degen-coin.svg";
@@ -47,17 +47,18 @@ const tokensByChains:any = {
 		USDC :'0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d'
 	},
     8453 : {
-		eth    : '0x0000000000000000000000000000000000000000',
-		weth   : '0x4200000000000000000000000000000000000006',
-		usdc   : '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
-		cbbtc  : '0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf',
-		mantra : '0x3992B27dA26848C2b19CeA6Fd25ad5568B68AB98',
-		degen  : '0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed'
+		ETH    : '0x0000000000000000000000000000000000000000',
+		WETH   : '0x4200000000000000000000000000000000000006',
+		USDC   : '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
+		CBBTC  : '0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf',
+		MANTRA : '0x3992B27dA26848C2b19CeA6Fd25ad5568B68AB98',
+		DEGEN  : '0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed'
 	}
 }
 const tokensIcons:any = {
     BNB  : BNBIcon,
     USDC : USDCIcon,
+    USDT : USDTIcon,
     ETH  : ETHIcon,
     CBBTC : CBBTCIcon,
     DEGEN : DEGENIcon,
@@ -66,7 +67,7 @@ const tokensIcons:any = {
     BASE : BASEIcon
 }
 
-type AvailableCurrencies = "USDC" | "ETH" | "CBBTC" | "DEGEN" | "MANTRA" | "WETH" | "BNB" | "BASE";
+type AvailableCurrencies = "USDC" | "USDT" | "ETH" | "CBBTC" | "DEGEN" | "MANTRA" | "WETH" | "BNB" | "BASE";
 
 const errString = "Not enough funds to make the deposit";
 
@@ -74,7 +75,7 @@ const DepositForm = () => {
     const { chainId } = useConnectWallet();
     const [amount, setAmount] = useState<string>("0");
     const [balance, setMaxBalance] = useState<string | null>(null);
-    const [displayCurrency, setDisplayCurrency] = useState<AvailableCurrencies>("ETH");
+    const [displayCurrency, setDisplayCurrency] = useState<AvailableCurrencies>("USDC");
     const [openDebit, setOpenDebit] = useState(false);
     const [openETH, setOpenETH] = useState(false);
     const [isBuyChecked, setIsBuyChecked] = useState(true); // условие для чекбокса
@@ -171,30 +172,29 @@ const DepositForm = () => {
                 </button>
             )}
 
-            {network.value === 'BASE' && (
-                <button
-                    onClick={() => setDisplayCurrency('BASE')}
-                    className={`${styles.chooseCurrBtn} ${
-	                displayCurrency === "BASE"
-	                    ? styles.activeChooseCurrBtn
-	                    : ""
-                    }`}
-                >
-                    <Image src={network.icon} alt={network.value} width={24} height={24} />
-                    <span>BASE</span>
-                </button>
-            )}
-
-            <button
-                onClick={() => setDisplayCurrency('USDC')}
+            {['ETH','BNB'].includes(network.value) && <button
+                onClick={() => setDisplayCurrency('USDT')}
                 className={`${styles.chooseCurrBtn} ${
-                    displayCurrency === "USDC"
+                    displayCurrency === "USDT"
                         ? styles.activeChooseCurrBtn
                         : ""
                 }`}
             >
-                <Image src={USDCIcon} alt="USDC" width={24} height={24} />
-                <span>USDC</span>
+                <Image src={USDTIcon} alt="USDT" width={24} height={24} />
+                <span>USDT</span>
+            </button>}
+
+            {network.value === 'BASE' && <>
+            <button
+                onClick={() => setDisplayCurrency('BASE')}
+                className={`${styles.chooseCurrBtn} ${
+                displayCurrency === "BASE"
+                    ? styles.activeChooseCurrBtn
+                    : ""
+                }`}
+            >
+                <Image src={network.icon} alt={network.value} width={24} height={24} />
+                <span>BASE</span>
             </button>
 
             <button
@@ -244,6 +244,20 @@ const DepositForm = () => {
                 <Image src={MANTRAIcon} alt="MANTRA" width={24} height={24} />
                 <span>Mantra</span>
             </button>
+            </>}
+
+            <button
+                onClick={() => setDisplayCurrency('USDC')}
+                className={`${styles.chooseCurrBtn} ${
+                    displayCurrency === "USDC"
+                        ? styles.activeChooseCurrBtn
+                        : ""
+                }`}
+            >
+                <Image src={USDCIcon} alt="USDC" width={24} height={24} />
+                <span>USDC</span>
+            </button>
+
         </div>
 
         <div
