@@ -35,7 +35,8 @@ export default function App({Component, pageProps: { session, ...pageProps }}: A
 		const utms = Object.fromEntries(Object.keys(query)
 			.filter(k=>k.startsWith('utm_'))
 			.map(key=>[key,query[key]]))
-		if (Object.keys(utms).length){
+
+		if (Object.keys(utms).length > 1){
 			localStorage.utms = JSON.stringify(utms)
 		}
 	}, [query])
