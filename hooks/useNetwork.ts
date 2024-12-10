@@ -26,13 +26,13 @@ export const networks: Record<number, Network> = {
       value  : 'BNB',
       icon   : '/svg/bnb-icon.svg',
    },
-   // 8453: {
-   //    chain  : base,
-   //    chainId: 8453,
-   //    label  : 'BASE Chain',
-   //    value  : 'ETH',
-   //    icon   : '/svg/ether-icon.svg',
-   // }
+   8453: {
+      chain  : base,
+      chainId: 8453,
+      label  : 'BASE Chain',
+      value  : 'BASE',
+      icon   : '/svg/base-chain.svg',
+   }
 }
 
 interface UseNetwork {

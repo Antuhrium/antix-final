@@ -31,9 +31,13 @@
     }
 
     .dropdownMenu {
+        backdrop-filter: blur(40px);
         position: absolute;
         top: calc(100% + 4px);
         left: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
         width: 240px;
         padding: 16px 32px;
         background: rgba(240, 240, 240, 0.2);
@@ -47,16 +51,8 @@
             width: 100%;
             background-color: transparent;
             cursor: pointer;
-
+            gap: 8px;
             color: white;
-
-            span {
-                margin-left: 8px;
-            }
-
-            &:last-child {
-                margin-top: 16px;
-            }
         }
         .dropdownItemActive {
             span {
