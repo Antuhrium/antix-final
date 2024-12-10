@@ -27,16 +27,16 @@ export default function App({Component, pageProps: { session, ...pageProps }}: A
 	// запоминаем рефку по которой впервые пришел пользователь
 	useEffect(()=>{
 		const refcode = query?.refcode
-		if (!refcode || typeof window === 'undefined') return
-		if (localStorage.refcode) return
-		localStorage.refcode = refcode
+		if (typeof window === 'undefined') return
+		if (refcode && !localStorage.refcode) {
+			localStorage.refcode = refcode
+		}
 
 		const utms = Object.fromEntries(Object.keys(query)
 			.filter(k=>k.startsWith('utm_'))
 			.map(key=>[key,query[key]]))
 
 		localStorage.utms = JSON.stringify(utms)
-
 	}, [query])
 
 
