@@ -140,7 +140,7 @@ export default function DepositButton({amount, type, tokenAddress}:IDepositButto
 	}
 
 	// Switch network 
-	if (![1,56].includes(Number(chainId))) {
+	if (!Object.keys(contractsAddresses).includes(String(chainId))) {
 		return <button onClick={() => switchNetwork(1)} className={styles.depositBtn}>
 			{t('stage.depositBtn.switch')}
 		</button>
