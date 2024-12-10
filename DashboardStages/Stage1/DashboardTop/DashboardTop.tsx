@@ -111,13 +111,13 @@ const DashboardTop = () => {
                             <BalanceItem
                                 currencySrc={TetherIcon}
                                 title="USDT"
-                                balance={String(balances.usdt)}
+                                balance={String(balances.usdt || 0)}
                             />
 
                             <BalanceItem
                                 currencySrc={USDCIcon}
                                 title="USDC"
-                                balance={String(balances.usdc)}
+                                balance={String(balances.usdc || 0)}
                             />
 
                             <BalanceItem
