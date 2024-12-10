@@ -106,18 +106,20 @@ const DepositForm = () => {
 
         if (displayCurrency === 'BNB') {
             // отнимаем коммисию которая понадобится для отправки транзакции
-            setAmount((Number(balance) - 0.001).toFixed(6)) 
+            setAmountAndRecive((Number(balance) - 0.001).toFixed(6))
         } else {
-            setAmount(balance) 
+            setAmountAndRecive(balance)
         }
     }
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (balance !== null && +balance < +amount) setError(t('stage.form.error'));
+        if (balance !== null && +balance < +amount) setError(errString);
+        setAmountAndRecive(e.target.value)
+    }
 
+    function setAmountAndRecive(value:string){
         const decimals = (displayCurrency==='ETH') ? 18 : 6
 
-        let value = e.target.value;
         let cleanedValue = value
             .replace(/[^0-9.,]/g, "")
             .replace(",", ".")
@@ -141,12 +143,17 @@ const DepositForm = () => {
         }
     }
 
+    function selectCurrency(symbol:AvailableCurrencies){
+        setDisplayCurrency(symbol)
+        setAmountAndRecive('0')
+    }
+
 
     return <div className={styles.sendingWrapepr}>
         <div className={styles.chooseCurrWrapper}>
             {network.value === 'ETH' && (
                 <button
-                    onClick={() => setDisplayCurrency("ETH")}
+                    onClick={() => selectCurrency("ETH")}
                     className={`${styles.chooseCurrBtn} ${
 	                displayCurrency === "ETH"
 	                    ? styles.activeChooseCurrBtn
@@ -160,7 +167,7 @@ const DepositForm = () => {
 
             {network.value === 'BNB' && (
                 <button
-                    onClick={() => setDisplayCurrency('BNB')}
+                    onClick={() => selectCurrency('BNB')}
                     className={`${styles.chooseCurrBtn} ${
 	                displayCurrency === "BNB"
 	                    ? styles.activeChooseCurrBtn
@@ -173,7 +180,7 @@ const DepositForm = () => {
             )}
 
             {['ETH','BNB'].includes(network.value) && <button
-                onClick={() => setDisplayCurrency('USDT')}
+                onClick={() => selectCurrency('USDT')}
                 className={`${styles.chooseCurrBtn} ${
                     displayCurrency === "USDT"
                         ? styles.activeChooseCurrBtn
@@ -186,7 +193,7 @@ const DepositForm = () => {
 
             {network.value === 'BASE' && <>
             <button
-                onClick={() => setDisplayCurrency('BASE')}
+                onClick={() => selectCurrency('BASE')}
                 className={`${styles.chooseCurrBtn} ${
                 displayCurrency === "BASE"
                     ? styles.activeChooseCurrBtn
@@ -198,7 +205,7 @@ const DepositForm = () => {
             </button>
 
             <button
-                onClick={() => setDisplayCurrency('DEGEN')}
+                onClick={() => selectCurrency('DEGEN')}
                 className={`${styles.chooseCurrBtn} ${
                     displayCurrency === "DEGEN"
                         ? styles.activeChooseCurrBtn
@@ -210,7 +217,7 @@ const DepositForm = () => {
             </button>
 
             <button
-                onClick={() => setDisplayCurrency('WETH')}
+                onClick={() => selectCurrency('WETH')}
                 className={`${styles.chooseCurrBtn} ${
                     displayCurrency === "WETH"
                         ? styles.activeChooseCurrBtn
@@ -222,7 +229,7 @@ const DepositForm = () => {
             </button>
 
             <button
-                onClick={() => setDisplayCurrency('CBBTC')}
+                onClick={() => selectCurrency('CBBTC')}
                 className={`${styles.chooseCurrBtn} ${
                     displayCurrency === "CBBTC"
                         ? styles.activeChooseCurrBtn
@@ -234,7 +241,7 @@ const DepositForm = () => {
             </button>
 
             <button
-                onClick={() => setDisplayCurrency('MANTRA')}
+                onClick={() => selectCurrency('MANTRA')}
                 className={`${styles.chooseCurrBtn} ${
                     displayCurrency === "MANTRA"
                         ? styles.activeChooseCurrBtn
@@ -247,7 +254,7 @@ const DepositForm = () => {
             </>}
 
             <button
-                onClick={() => setDisplayCurrency('USDC')}
+                onClick={() => selectCurrency('USDC')}
                 className={`${styles.chooseCurrBtn} ${
                     displayCurrency === "USDC"
                         ? styles.activeChooseCurrBtn
