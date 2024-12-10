@@ -1,7 +1,6 @@
 import s from './TransactionItem.module.scss';
 import Image from 'next/image';
-import { formatCrypto } from '@/utils/utils';
-
+import { formatCrypto, explorerUrls } from '@/utils/utils';
 import vesting_antix from '/public/svg/vantix-icon.svg';
 import TetherIcon from "/public/svg/tether-icon.svg";
 import BNBIcon from "/public/svg/bnb-icon.svg";
@@ -15,26 +14,25 @@ const tokensIcons:any = {
    ETH  : ETHIcon
 }
 const tokensSymbols:any = {
-   '1_0x0000000000000000000000000000000000000000':'ETH',
-   '1_0xdac17f958d2ee523a2206206994597c13d831ec7':'USDT',
-   '1_0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48':'USDC',
-   '56_0x0000000000000000000000000000000000000000':'BNB',
-   '56_0x55d398326f99059ff775485246999027b3197955':'USDT',
-   '56_0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d':'USDC'
+   '1_0x0000000000000000000000000000000000000000' :'ETH',
+   '1_0xdac17f958d2ee523a2206206994597c13d831ec7' :'USDT',
+   '1_0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48' :'USDC',
+
+   '56_0x0000000000000000000000000000000000000000' :'BNB',
+   '56_0x55d398326f99059ff775485246999027b3197955' :'USDT',
+   '56_0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d' :'USDC',
+
+   '8453_0x0000000000000000000000000000000000000000' : 'ETH',
+   '8453_0x4200000000000000000000000000000000000006' : 'WETH',
+   '8453_0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913' : 'USDC',
+   '8453_0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf' : 'cbBTC',
+   '8453_0x3992B27dA26848C2b19CeA6Fd25ad5568B68AB98' : 'MANTRA',
+   '8453_0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed' : 'DEGEN',
 }
 
 
 function getTokenSymbol(chainId:number, address:string){
    return tokensSymbols[chainId+'_'+address.toLowerCase()]
-}
-function getTokenIcon(chainId:number, token:string){
-   return tokensIcons[getTokenSymbol(chainId, token)]
-}
-
-
-const explorerUrls: {[key: number]: string} = {
-	1  : 'https://etherscan.io',
-	56 : 'https://bscscan.com'
 }
 
 export const TransactionItem = ({tx}:{tx:any}) => {

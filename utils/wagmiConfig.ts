@@ -1,18 +1,18 @@
 import { createAppKit } from '@reown/appkit/react'
-import { bsc, mainnet } from '@reown/appkit/networks'
+import { bsc, mainnet, base } from '@reown/appkit/networks'
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi'
 
 const projectId = process.env.WALLET_CONNECT_ID
 if (!projectId) throw new Error('Project ID is not defined')
 
 const wagmiAdapter = new WagmiAdapter({
-	networks: [mainnet, bsc],
+	networks: [mainnet, bsc, base],
 	projectId
 })
 
 export const AppKit = createAppKit({
 	adapters: [wagmiAdapter],
-	networks: [mainnet, bsc],
+	networks: [mainnet, bsc, base],
 	allowUnsupportedChain: true,
 	// defaultNetwork: mainnet,
 	projectId,

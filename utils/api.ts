@@ -95,7 +95,7 @@ class Api {
   }
   async receiveTokens() {
     try {
-        const [ethRes, bscRes] = await Promise.all([this.stagesInfo(1), this.stagesInfo(56)])
+        const [ethRes, bscRes, baseRes] = await Promise.all([this.stagesInfo(1), this.stagesInfo(56), this.stagesInfo(8453)])
 
         const targetInUSD = ethRes.stages.reduce((a: any, i: any) => {
           return a + (i.cap * i.prices[0]);
@@ -106,7 +106,10 @@ class Api {
         const soldBsc = bscRes.stages.reduce((a: any, stage: any, index:number) => {
           return a + (stage.sold * ethRes.stages[index].prices[0]);
         }, 0)
-        const sold = soldEth+soldBsc
+        const soldBase = baseRes.stages.reduce((a: any, stage: any, index:number) => {
+          return a + (stage.sold * ethRes.stages[index].prices[0]);
+        }, 0)
+        const sold = soldEth+soldBsc+soldBase
 
 
         return {

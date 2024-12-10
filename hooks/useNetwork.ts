@@ -1,5 +1,5 @@
 import { useAppKitNetwork, useAppKitAccount } from '@reown/appkit/react'
-import { mainnet, bsc } from '@reown/appkit/networks'
+import { mainnet, bsc, base } from '@reown/appkit/networks'
 import { AppKitNetwork } from '@reown/appkit-common';
 import { useEffect } from 'react';
 
@@ -26,6 +26,13 @@ export const networks: Record<number, Network> = {
       value  : 'BNB',
       icon   : '/svg/bnb-icon.svg',
    },
+   // 8453: {
+   //    chain  : base,
+   //    chainId: 8453,
+   //    label  : 'BASE Chain',
+   //    value  : 'ETH',
+   //    icon   : '/svg/ether-icon.svg',
+   // }
 }
 
 interface UseNetwork {
