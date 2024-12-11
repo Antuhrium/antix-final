@@ -14,6 +14,7 @@ import Arrow from '@/public/svg/top-arrow.svg';
 import styles from './news.module.scss';
 import NewsItem from '@/components/NewsItem/NewsItem';
 import dynamic from 'next/dynamic';
+import { useTranslation } from 'react-i18next';
 
 const countries = [
   'Brazilian',
@@ -40,6 +41,7 @@ const countries = [
 
 const News = () => {
   const router = useRouter();
+  const { t } = useTranslation('dashboard');
 
   return (
     <main className={styles.page}>
@@ -49,7 +51,7 @@ const News = () => {
           <button className={styles.btnBack} onClick={() => router.push('/')}>
             <Image src={BackIcon} alt="Go back" width={24} height={24} />
           </button>
-          <h2 className={styles.title}>What are the news everywhere?</h2>
+          <h2 className={styles.title}>{t('news.title')}</h2>
         </div>
 
         <div className={styles.allMediaWrapper}>
@@ -59,7 +61,7 @@ const News = () => {
             width={24}
             height={24}
           />
-          <h4 className={styles.allMediaTitle}>All media</h4>
+          <h4 className={styles.allMediaTitle}>{t('news.allMedia')}</h4>
         </div>
 
         <div className={styles.newsWrapper}>
@@ -70,7 +72,7 @@ const News = () => {
         </div>
       </section>
       <div className={styles.sliderWrapper}>
-        <div className={styles.sliderTitle}>Read your local Antix news in</div>
+        <div className={styles.sliderTitle}>{t('news.readLocalNews')}</div>
         <div className={styles.slider}>
           <Swiper
             spaceBetween={32}

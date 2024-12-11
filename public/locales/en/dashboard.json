@@ -204,5 +204,10 @@
       "claim": "Claim",
       "view": "View Transaction"
     }
+  },
+  "news": {
+    "title": "What are the news everywhere?",
+    "allMedia": "All media",
+    "readLocalNews": "Read your local Antix news in"
   }
 }
