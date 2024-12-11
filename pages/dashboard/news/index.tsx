@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from '@/sections/Header/Header';
-const Footer = dynamic(() => import("@/sections/Footer/Footer"), { ssr: false });
+const Footer = dynamic(() => import('@/sections/Footer/Footer'), {
+  ssr: false,
+});
 import Image from 'next/image';
 
 import 'swiper/scss';
@@ -15,33 +17,18 @@ import styles from './news.module.scss';
 import NewsItem from '@/components/NewsItem/NewsItem';
 import dynamic from 'next/dynamic';
 import { useTranslation } from 'react-i18next';
-
-const countries = [
-  'Brazilian',
-  'Chinese',
-  'Czech',
-  'English',
-  'French',
-  'German',
-  'Indonesian',
-  'Italian',
-  'Japanese',
-  'Korean',
-  'Latvian',
-  'Malay',
-  'Polish',
-  'Portuguese',
-  'Romanian',
-  'Russian',
-  'Spanish',
-  'Turkish',
-  'Ukrainian',
-  'Vietnamese',
-];
+import i18n, { getCurrentLanguageInfo, languages } from '@/utils/i18n';
 
 const News = () => {
   const router = useRouter();
   const { t } = useTranslation('dashboard');
+
+  const changeLanguage = (lng: string) => {
+    if (typeof window !== 'undefined') {
+      i18n.changeLanguage(lng);
+      localStorage.setItem('i18nextLng', lng);
+    }
+  };
 
   return (
     <main className={styles.page}>
@@ -56,7 +43,7 @@ const News = () => {
 
         <div className={styles.allMediaWrapper}>
           <Image
-            src={'/images/flags/English.png'}
+            src={getCurrentLanguageInfo().flag}
             alt="Flag"
             width={24}
             height={24}
@@ -65,10 +52,11 @@ const News = () => {
         </div>
 
         <div className={styles.newsWrapper}>
-          <NewsItem date='2024-11-01' image='/images/featured-in/1.png' text="Antix Entra em Cripto com o Lançamento do Token ANTIX, Oferecendo Acesso Antecipado a Humanos Digitais Potencializados por IA" />
-          <NewsItem date='2024-11-01' image='/images/featured-in/2.png' text="Antix Entra em Cripto com o Lançamento do Token ANTIX, Oferecendo Acesso Antecipado a Humanos Digitais Potencializados por IA" />
-          <NewsItem date='2024-11-01' image='/images/featured-in/3.png' text="Antix Entra em Cripto com o Lançamento do Token ANTIX, Oferecendo Acesso Antecipado a Humanos Digitais Potencializados por IA" />
-          <NewsItem date='2024-11-01' image='/images/featured-in/4.png' text="Antix Entra em Cripto com o Lançamento do Token ANTIX, Oferecendo Acesso Antecipado a Humanos Digitais Potencializados por IA" />
+          <NewsItem
+            date="2024-11-01"
+            image="/images/featured-in/1.png"
+            text="Antix Entra em Cripto com o Lançamento do Token ANTIX, Oferecendo Acesso Antecipado a Humanos Digitais Potencializados por IA"
+          />
         </div>
       </section>
       <div className={styles.sliderWrapper}>
@@ -84,19 +72,19 @@ const News = () => {
             modules={[Navigation]}
             loop={true}
           >
-            {countries.map((country, index) => (
-              <SwiperSlide
-                className={styles.slideWrapper}
-                key={`${country}-${index}`}
-              >
-                <div className={styles.slideName}>
+            {languages.map((lng) => (
+              <SwiperSlide className={styles.slideWrapper} key={lng.code}>
+                <div
+                  className={styles.slideName}
+                  onClick={() => changeLanguage(lng.code)}
+                >
                   <Image
-                    src={`/images/flags/${country}.png`}
+                    src={`/images/flags/${lng.name}.png`}
                     alt="Flag"
                     width={32}
                     height={32}
                   />
-                  <span>{country}</span>
+                  <span>{lng.name}</span>
                 </div>
                 <Image
                   src={BackIcon}
