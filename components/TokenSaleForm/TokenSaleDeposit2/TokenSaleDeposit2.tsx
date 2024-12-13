@@ -17,6 +17,10 @@ import RaisedProgressBar from '@/DashboardStages/Stage1/DashboardTop/RaisedProgr
 import api from '@/utils/api'
 import { useTranslation } from 'react-i18next';
 
+import ETHIcon from '@/public/svg/ether-icon.svg';
+import BNBIcon from '@/public/svg/bnb-icon.svg';
+import BaseIcon from '@/public/svg/base-chain.svg';
+
 interface ITokenSaleDeposit2 {
     stage1DateStr: string;
     setIsRefModal: React.Dispatch<React.SetStateAction<boolean>>;
@@ -53,6 +57,29 @@ const TokenSaleDeposit2: React.FC<ITokenSaleDeposit2> = ({stage1DateStr, setIsRe
         className={styles.timerHead}
         style={{ backgroundImage: `url(${BgHead.src})` }}
     >
+        <div className={styles.timerLogos}>
+            <Image
+                src={ETHIcon}
+                width={23}
+                height={23}
+                alt="ETH"
+                className={styles.logo}
+            />
+            <Image
+                src={BNBIcon}
+                width={23}
+                height={23}
+                alt="BNB"
+                className={styles.logo}
+            />
+            <Image
+                src={BaseIcon}
+                width={23}
+                height={23}
+                alt="Base"
+                className={styles.logo}
+            />
+        </div>
         <div className={styles.timerWrapperTitle}>
             <Image
                 src={LogoSmall}

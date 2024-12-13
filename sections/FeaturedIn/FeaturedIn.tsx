@@ -9,10 +9,13 @@ import { logos } from "./mocdata";
 
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import { useRouter } from 'next/router'
 
 const FeaturedIn: React.FC = () => {
     const swiperRef = useRef<any>(null);
     const { t } = useTranslation('landing');
+    const { push } = useRouter();
+
     let slidesPerView;
     let windowWidth = typeof window === "undefined" ? 0 : window.innerWidth;
     switch (windowWidth) {
@@ -65,6 +68,12 @@ const FeaturedIn: React.FC = () => {
                     ))}
                 </Swiper>
             </div>
+            <button
+                className={styles.btnShowAll}
+                onClick={() => push('/dashboard/news')}
+            >
+                Show All
+            </button>
         </section>
     );
 };

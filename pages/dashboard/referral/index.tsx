@@ -35,29 +35,28 @@ import RefHistory from '@/components/RefHistory/RefHistory';
 import { useTranslation } from 'react-i18next';
 const Footer = dynamic(() => import("@/sections/Footer/Footer"), { ssr: false });
 
-
-// const referralFaq = [
-//     {
-//         id: 1,
-//         title: "How does the referral program work?",
-//         content: "The referral program allows you to earn bonuses for inviting new users. To participate, generate your unique referral code in your account and share it with a friend. Once your friend visits the website, connects their wallet, and makes a purchase, both of you will receive rewards."
-//     },
-//     {
-//         id: 2,
-//         title: "How do I refer a friend?",
-//         content: "You can refer a friend by sharing your unique referral link, which is available in your Antix account (referral). When your friend connects their wallet and completes a purchase, you will receive 10% of their purchase amount as a reward, and your friend will get a 5% bonus in tokens."
-//     },
-//     {
-//         id: 3,
-//         title: "Is there a limit to the rewards I can earn?",
-//         content: "There may be limits based on the referral program’s terms, and since only a limited number of tokens are allocated for the sale, restrictions on rewards may apply. However, users are encouraged to invite as many friends as possible to maximize their benefits."
-//     },
-//     {
-//         id: 4,
-//         title: "When will I receive my referral rewards?",
-//         content: "The 10% reward for the referrer can be claimed after the stage in which it was earned ends, while the 5% bonus tokens for the referred user will be credited after the TGE (Token Generation Event)."
-//     }
-// ];
+const referralFaq = [
+    {
+        id: 1,
+        title: "How do I get bonuses for purchases made through a referral link?",
+        content: "To get bonuses, a user must click on your referral link and connect their wallet for the first time. If a user has already connected their wallet using a regular link, they will not be able to receive bonuses if they make a purchase through a referral link."
+    },
+    {
+        id: 2,
+        title: "What happens if I've already connected my wallet using a regular link and then click on a referral link?",
+        content: "If you've already connected your wallet using a regular link, you will not be able to receive bonuses if you make a purchase through a referral link. To get bonuses, you must connect your wallet using a referral link for the first time."
+    },
+    {
+        id: 3,
+        title: "Who receives bonuses if I signed up through someone else's link?",
+        content: "If you signed up through someone else's link, bonuses for all purchases will go to the creator of that link."
+    },
+    {
+        id: 4,
+        title: "Can I reconnect my wallet using a referral link if I've already connected it using a regular link?",
+        content: "No, wallets that were previously connected using a referral link cannot be referred by someone else, even if they are reconnected using a referral link."
+    }
+];
 
 const Referral = () => {
     const [isGenerated, setIsGenerated] = useState(false);
@@ -293,19 +292,21 @@ const Referral = () => {
                             />
                         </div>
                     </div>
-                          
+
                     <div className={styles.mobileFaq}>
                         <Faq faqItems={faqInfo} />
                     </div>
                 </div>
             </div>
 
+            {/*
             <div className={styles.historyWrapper}>
                 <h3 className={styles.historyTitle}>{t('referral.history.title')}</h3>
                 <RefHistory />
                 <div className={styles.historyContainer}>
                 </div>
             </div>
+            */}
         </section>
         <Footer style={{
             margin: '100px 16px 16px',

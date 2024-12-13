@@ -26,7 +26,6 @@
                 line-height: 21px;
                 text-align: left;
                 color: #ffffff;
-                text-transform: uppercase;
             }
         }
 
@@ -45,7 +44,6 @@
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
             gap: 12px;
-
             .divider {
                 display: none;
             }
@@ -53,21 +51,29 @@
                 width: 100% !important;
             }
         }
-
         @media (max-width: 840px) {
             gap: 10px;
-
             .chooseCurrBtn:nth-child(4) {
                 img:nth-child(1) {
                     width: 36px;
                     height: 11px;
                 }
-
                 img:nth-child(2) {
                     width: 28px;
                     height: 20px;
                 }
             }
+        }
+    }
+
+    .baseCurrWrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 8px;
+
+        .chooseCurrBtn {
+            width: 100%;
         }
     }
 

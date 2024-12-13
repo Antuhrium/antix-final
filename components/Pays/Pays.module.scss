@@ -1,145 +1,47 @@
 .pays {
-  margin-top: 32px;
-  width: 100%;
+   margin-top: 32px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   gap: 9.5px;
 
-  .paysTitle {
-    color: #ffffff66;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 21px;
-    align-items: center;
-    gap: 7.8px;
-    display: flex;
+   .paysTitle {
+      color: #ffffff66;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+   }
 
-    &::before,
-    &::after {
-      content: '';
-      max-width: 149px;
-      display: block;
-      height: 1px;
-      width: 100%;
-      background: #ffffff33;
-    }
-  }
-
-  .paysCards {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    margin-top: 8px;
-
-    .networks {
-      display: flex;
-      gap: 3px;
-      margin-top: -2px;
-    }
-
-    .paysCard,
-    .paysCard1 {
-      width: 100%;
-      padding: 8.5px;
-      gap: 7px;
-
+   .paysIcons {
+      padding: 8px 12px;
       border-radius: 8px;
-      background: rgba(255, 255, 255, 0.04);
-      transition: background 0.4s ease;
-
+      background: #ffffff0a;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 7px;
+      gap: 12px;
+   }
 
-      span {
-        font-size: 12px;
-        font-weight: 600;
-        text-align: left;
-        line-height: 11px;
-        color: #ffffff;
-        text-transform: uppercase;
+   @media (max-width: 1280px) {
+      .paysIcons {
+         padding: 6px 10px;
+         gap: 6px;
+
+         img {
+            width: 20px;
+            height: 20px;
+         }
       }
 
-      &:hover {
-        background: rgba(255, 255, 255, 0.02);
-        transition: background 0.4s ease;
+      .paysTitle {
+         font-size: 10px;
+         line-height: 19px;
       }
-    }
+   }
 
-    .paysCard {
-        background: rgba(255, 255, 255, 0.08);
-    }
-
-    .paysCard1 {
-      width: 90px;
-      height: 35px;
-      padding: 0;
-    }
-  }
-
-  @media screen and (max-width: 1280px) {
-    margin-top: 22px;
-
-    .paysTitle {
-      font-size: 9.96px;
-      line-height: 14.93px;
-
-      &::before,
-      &::after {
-        max-width: 105px;
+   @media (max-width: 480px) {
+      .paysIcons {
+         padding: 6px 9px;
+         gap: 5px;
       }
-    }
-
-    .paysCards {
-      margin-top: 5.7px;
-      gap: 9px;
-
-      .paysCard:nth-child(1),
-      .paysCard:nth-child(2),
-      .paysCard:nth-child(3) {
-        img {
-          width: 25px;
-          height: 25px;
-        }
-      }
-
-      .paysCard {
-        border-radius: 5.7px;
-        gap: 5.7px;
-        height: 45px;
-
-        div {
-          margin-top: -4px;
-
-          span {
-            font-size: 10px;
-          }
-
-          .networks > .network {
-            width: 13px;
-            height: 13px;
-          }
-        }
-      }
-
-      .paysCard1 {
-        height: 30px;
-        width: 80px;
-      }
-    }
-  }
-  @media screen and (max-width: 960px) {
-    .paysTitle {
-      &::before,
-      &::after {
-        max-width: 108px;
-      }
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .paysTitle {
-      &::before,
-      &::after {
-        max-width: 103px;
-      }
-    }
-  }
+   }
 }

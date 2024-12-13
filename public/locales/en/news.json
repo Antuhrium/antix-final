@@ -1,0 +1,271 @@
+{
+   "title": "What are the news everywhere?",
+   "allMedia": "All media",
+   "localNewsTitle": "Read your local Antix news in",
+
+   "countries": [
+      "Brazilian",
+      "Chinese",
+      "Czech",
+      "English",
+      "French",
+      "German",
+      "Indonesian",
+      "Italian",
+      "Japanese",
+      "Korean",
+      "Latvian",
+      "Malay",
+      "Polish",
+      "Portuguese",
+      "Romanian",
+      "Russian",
+      "Spanish",
+      "Turkish",
+      "Ukrainian",
+      "Vietnamese"
+   ],
+
+   "news": [
+      {
+         "date": "2024-08-16",
+         "text": "Antix Rolls Out AVAGEN Update And Brings Crypto And Web3 To Digital Humans",
+         "image": "/images/featured-in/7.png",
+         "url": "https://cryptopanic.com/news/19803012/Antix-Rolls-Out-AVAGEN-Update-and-Brings-Crypto-and-Web3-to-Digital-Humans"
+      },
+      {
+         "date": "2024-12-04",
+         "text": "Cryptocurrency News Aggregator",
+         "image": "/images/featured-in/8.png",
+         "url": "https://cryptorank.io/news"
+      },
+      {
+         "date": "2024-08-16",
+         "text": "Antix Rolls Out AVAGEN Update and Brings Crypto and Web3 to Digital Humans",
+         "image": "/images/featured-in/10.png",
+         "url": "https://cryptoadventure.com/antix-rolls-out-avagen-update-and-brings-crypto-and-web3-to-digital-humans/"
+      },
+      {
+         "date": "Latest News",
+         "text": "Crypto News",
+         "image": "/images/featured-in/11.png",
+         "url": "https://www.cryptocompare.com/news/list/latest/?feeds=cryptodaily"
+      },
+      {
+         "date": "2024-11-01",
+         "text": "Antix Rolls Out AVAGEN Update and Brings Crypto and Web3 to Digital Humans",
+         "image": "/images/featured-in/13.png",
+         "url": "https://ecoopex.com/antix-rolls-out-avagen-update-and-brings-crypto-and-web3-to-digital-humans/"
+      },
+      {
+         "date": "2024-08-17",
+         "text": "As the Digital Humans Market Nears $22B, Antix Taps Into Web3 and Crypto with Its AVAGEN Solution",
+         "image": "/images/featured-in/14.png",
+         "url": "https://gab.com/CoinGabbar/posts/112975620181862429"
+      },
+      {
+         "date": "2024-08-16",
+         "text": "Antix Rolls Out AVAGEN Update And Brings Crypto And Web3 To Digital Humans",
+         "image": "/images/featured-in/15.png",
+         "url": "https://cryptodaily.co.uk/2024/08/antix-rolls-out-avagen-update-and-brings-crypto-and-web3-to-digital-humans"
+      },
+      {
+         "date": "Latest News",
+         "text": "Real-time Cryptocurrency News Feed",
+         "image": "/images/featured-in/16.png",
+         "url": "https://icoholder.com/en/news"
+      },
+      {
+         "date": "2024-08-22",
+         "text": "Antix Inc Prepares for the AVAGEN Update, Augmenting Its Advanced Personalization and Multilingual Capabilities",
+         "image": "/images/featured-in/17.png",
+         "url": "https://news.kisspr.com/2024/08/22/antix-inc-prepares-for-the-avagen-update-augmenting-its-advanced-personalization-and-multilingual-capabilities_1101518.html"
+      },
+      {
+         "date": "Latest News",
+         "text": "Articles by Adrian Barkley",
+         "image": "/images/featured-in/19.png",
+         "url": "https://news.kisspr.com/2024/08/22/antix-inc-prepares-for-the-avagen-update-augmenting-its-advanced-personalization-and-multilingual-capabilities_1101518.html"
+      },
+      {
+         "date": "2024-08-26",
+         "text": "As the Digital Humans Market Nears $22B, Antix Taps Into Web3 and Crypto with Its AVAGEN Solution",
+         "image": "/images/featured-in/21.png",
+         "url": "https://steemit.com/coingabbar/@coin.gabbar/as-the-digital-humans-market-nears-usd22b-antix-taps-into-web3-and-crypto-with-its-avagen-solution"
+      },
+      {
+         "date": "Latest News",
+         "text": "As the Digital Humans Market Nears $22B, Antix Taps Into Web3 and Crypto with Its AVAGEN Solution",
+         "image": "/images/featured-in/23.png",
+         "url": "https://wakelet.com/wake/Q20i-pInV30sOqAWKY5h0"
+      },
+      {
+         "date": "2024-08-17",
+         "text": "As the Digital Humans Market Nears $22B, Antix Taps Into Web3 and Crypto with Its AVAGEN Solution",
+         "image": "/images/featured-in/24.png",
+         "url": "https://bites.xyz/post/be7b8df143dc"
+      },
+      {
+         "date": "Latest News",
+         "text": "News Aggregator",
+         "image": "/images/featured-in/25.png",
+         "url": "https://blockchair.com/news"
+      },
+      {
+         "date": "2024-08-16",
+         "text": "Antix Rolls Out AVAGEN Update and Brings Crypto and Web3 to Digital Humans",
+         "image": "/images/featured-in/26.png",
+         "url": "https://coinrocco.com/en/crypto-news/233015/antix-rolls-avagen-update-brings-crypto-web3-digital-humans"
+      },
+      {
+         "date": "2024-08-16",
+         "text": "Antix Rolls Out AVAGEN Update and Brings Crypto and Web3 to Digital Humans",
+         "image": "/images/featured-in/31.png",
+         "url": "https://livingletterpress.com/antix-rolls-out-avagen-update-and-brings-crypto-and-web3-to-digital-humans/"
+      },
+      {
+         "date": "Latest News",
+         "text": "TOP 3 BREAKING NEWS",
+         "image": "/images/featured-in/32.png",
+         "url": "https://blockchainwhispers.com/?article=antix-rolls-out-avagen-update-and-brings-crypto-and-web3-to-digital-humans"
+      },
+      {
+         "date": "2024-09-24",
+         "text": "Antix Rolls Out AVAGEN Update and Brings Crypto and Web3 to Digital Humans",
+         "image": "/images/featured-in/33.png",
+         "url": "https://bitrss.com/antix-rolls-out-avagen-update-and-brings-crypto-and-web3-to-digital-humans-3480"
+      },
+      {
+         "date": "2024-11-02",
+         "text": "Antix, Next-Gen Digital Human Platform, to Launch Native Token ANTIX in November",
+         "image": "/images/featured-in/38.png",
+         "url": "https://bravenewcoin.com/insights/antix-next-gen-digital-human-platform-to-launch-native-token-antix-in-november"
+      },
+      {
+         "date": "2024-11-01",
+         "text": "As Virtual Influencer Market Surges to $15B, New ANTIX Token Aims to Democratize Access to Digital Humans",
+         "image": "/images/featured-in/39.png",
+         "url": "https://www.cryptotimes.io/2024/11/01/virtual-influencer-market-grows-as-antix-token-enables-access/"
+      },
+      {
+         "date": "2024-11-01",
+         "text": "Antix Enters Crypto with ANTIX Token Launch, Offering Early Access to AI-Powered Digital Humans",
+         "image": "/images/featured-in/15.png",
+         "url": "https://cryptodaily.co.uk/2024/11/antix-enters-crypto-with-antix-token-launch-offering-early-access-to-ai-powered-digital-humans"
+      },
+      {
+         "date": "2024-08-22",
+         "text": "Antix Inc Prepares for the AVAGEN Update, Augmenting Its Advanced Personalization and Multilingual Capabilities",
+         "image": "/images/featured-in/1.png",
+         "url": "https://markets.businessinsider.com/news/stocks/antix-inc-prepares-for-the-avagen-update-augmenting-its-advanced-personalization-and-multilingual-capabilities-1033715993"
+      },
+      {
+         "date": "2024-08-16",
+         "text": "Antix Rolls Out AVAGEN Update And Brings Crypto And Web3 To Digital Humans",
+         "image": "/images/featured-in/5.png",
+         "url": "https://coinmarketcap.com/community/post/338919151/"
+      },
+      {
+         "date": "2024-08-16",
+         "text": "Antix Rolls Out AVAGEN Update and Brings Crypto and Web3 to Digital Humans",
+         "image": "/images/featured-in/28.png",
+         "url": "https://www.coinfi.com/news/1562463/antix-rolls-out-avagen-update-and-brings-crypto-and-web3-to-digital-humans"
+      },
+      {
+         "date": "2024-08-16",
+         "text": "Antix Expands AVAGEN with Hyper-Realistic Digital Humans and Cryptocurrency in Web 3.0 Revolution",
+         "image": "/images/featured-in/3.png",
+         "url": "https://www.benzinga.com/content/40411119/antix-expands-avagen-with-hyper-realistic-digital-humans-and-cryptocurrency-in-web-3-0-revolution"
+      },
+      {
+         "date": "2024-10-12",
+         "text": "As the Digital Humans Market Nears $22B, Antix Taps Into Web3 and Crypto with Its AVAGEN Solution",
+         "image": "/images/featured-in/30.png",
+         "url": "https://crypto-potential.com/post/-as-the-digital-humans-market-nears-%2422b-antix-taps-into-web3-and-crypto-with-its-avagen-solution"
+      },
+      {
+         "date": "2024-11-01",
+         "text": "Antix, Next-Gen Digital Human Platform, to Launch Native Token ANTIX in November",
+         "image": "/images/featured-in/40.png",
+         "url": "https://article.wn.com/view/2024/11/01/Antix_NextGen_Digital_Human_Platform_to_Launch_Native_Token__6/"
+      },
+      {
+         "date": "2024-11-01",
+         "text": "Antix, Next-Gen Digital Human Platform, to Launch Native Token ANTIX in November",
+         "image": "/images/featured-in/41.png",
+         "url": "https://bitcoinethereumnews.com/tech/antix-next-gen-digital-human-platform-to-launch-native-token-antix-in-november/"
+      },
+      {
+         "date": "2024-11-04",
+         "text": "Experience the Future with ANTIX: Hyper-Realistic Digital Humans on Blockchain",
+         "image": "/images/featured-in/42.png",
+         "url": "https://coinbuzzfeed.com/experience-the-future-with-antix-hyper-realistic-digital-humans-on-blockchain/"
+      },
+      {
+         "date": "2024-11-02",
+         "text": "ANTIX: The Future of Digital Interaction is Here",
+         "image": "/images/featured-in/43.png",
+         "url": "https://www.php.cn/faq/1796662196.html"
+      },
+      {
+         "date": "2024-11-01",
+         "text": "Antix Enters Crypto with ANTIX Token Launch, Offering Early Access to AI-Powered Digital Humans",
+         "image": "/images/featured-in/44.png",
+         "url": "https://www.blogarama.com/technology-blogs/1421526-crypto-daily-blog/67776556-antix-enters-token-launch-offering-early-access-powered-digital-humans"
+      },
+      {
+         "date": "2024-11-02",
+         "text": "Antix Unveils AI-Powered Digital Avatars and ANTIX Token to Revolutionize Digital Interactions",
+         "image": "/images/featured-in/43.png",
+         "url": "https://www.php.cn/faq/1796662803.html"
+      },
+      {
+         "date": "2024-11-02",
+         "text": "Virtual Influencer Market Grows as ANTIX Token Enables Access",
+         "image": "/images/featured-in/45.png",
+         "url": "https://rmreviews.net/virtual-influencer-market-grows-as-antix-token-enables-access/"
+      },
+      {
+         "date": "2024-11-01",
+         "text": "Antix Enters Crypto With ANTIX Token Launch, Offering Early Access to AI-Powered Digital Humans",
+         "image": "/images/featured-in/4.png",
+         "url": "https://www.binance.com/en/square/post/15664838444042"
+      },
+      {
+         "date": "2024-11-01",
+         "text": "Antix Enters Crypto with ANTIX Token Launch, Offering Early Access to AI-Powered Digital Humans",
+         "image": "/images/featured-in/46.png",
+         "url": "https://aistock.io/antix-enters-crypto-with-antix-token-launch-offering-early-access-to-ai-powered-digital-humans/"
+      },
+      {
+         "date": "2024-11-01",
+         "text": "Antix Enters Crypto with ANTIX Token Launch, Offering Early Access to AI-Powered Digital Humans",
+         "image": "/images/featured-in/47.png",
+         "url": "https://thelaststandpodcast.com/antix-enters-crypto-with-antix-token-launch-offering-early-access-to-ai-powered-digital-humans/"
+      },
+      {
+         "date": "2024-11-01",
+         "text": "Antix Enters Crypto with ANTIX Token Launch, Offering Early Access to AI-Powered Digital Humans",
+         "image": "/images/featured-in/48.png",
+         "url": "https://bergennewspapergroup.com/antix-enters-crypto-with-antix-token-launch-offering-early-access-to-ai-powered-digital-humans/"
+      },
+      {
+         "date": "2024-11-01",
+         "text": "Antix Enters Crypto with ANTIX Token Launch, Offering Early Access to AI-Powered Digital Humans",
+         "image": "/images/featured-in/9.png",
+         "url": "http://rpice.com/ru/crypto-news/377787/antix-enters-crypto-antix-token-launch-offering-early-access-ai-powered-digital-humans"
+      },
+      {
+         "date": "2024-11-01",
+         "text": "Antix Enters Crypto with ANTIX Token Launch, Offering Early Access to AI-Powered Digital Humans",
+         "image": "/images/featured-in/49.png",
+         "url": "https://www.letstalkcrypto.co.uk/ru/crypto-news/306098/antix-enters-crypto-antix-token-launch-offering-early-access-ai-powered-digital-humans"
+      },
+      {
+         "date": "2024-11-01",
+         "text": "Antix Enters Crypto with ANTIX Token Launch, Offering Early Access to AI-Powered Digital Humans",
+         "image": "/images/featured-in/50.png",
+         "url": "https://research.ixfi.com/news/antix-enters-crypto-with-antix-token-launch-offering-early-access-to-ai-powered-digital-humans"
+      }
+   ]
+}

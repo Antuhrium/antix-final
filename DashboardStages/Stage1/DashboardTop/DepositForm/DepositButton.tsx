@@ -10,8 +10,9 @@ import DepositStatusModal from './DepositModal/StatusModal'
 import { useTranslation } from "react-i18next";
 
 const contractsAddresses:any = {
-    1  : process.env.TOKENSALE_ETH,
-    56 : process.env.TOKENSALE_BSC,
+    1    : process.env.TOKENSALE_ETH,
+    56   : process.env.TOKENSALE_BSC,
+	8453 : process.env.TOKENSALE_BASE
 }
 
 const erc20minABI = [{
@@ -50,6 +51,14 @@ const tokensDecimalsByChains:any = {
 		'0x55d398326f99059fF775485246999027B3197955': 18,
 		//  Token USDС 
 		'0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d': 18,
+	},
+	8453: {
+		'0x0000000000000000000000000000000000000000': 18,
+		'0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913': 6,
+		'0x4200000000000000000000000000000000000006': 18,
+		'0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf': 8,
+		'0x3992B27dA26848C2b19CeA6Fd25ad5568B68AB98': 18,
+		'0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed': 18,
 	}
 }
 
@@ -131,7 +140,7 @@ export default function DepositButton({amount, type, tokenAddress}:IDepositButto
 	}
 
 	// Switch network 
-	if (![1,56].includes(Number(chainId))) {
+	if (!Object.keys(contractsAddresses).includes(String(chainId))) {
 		return <button onClick={() => switchNetwork(1)} className={styles.depositBtn}>
 			{t('stage.depositBtn.switch')}
 		</button>

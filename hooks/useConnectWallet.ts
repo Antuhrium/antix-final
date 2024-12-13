@@ -31,6 +31,13 @@ const useAccountStore = create<AccountState>((set) => ({
 	setAccount: data => set({ account: data }),
 }))
 
+function clearLocalStorage(){
+	const utms = localStorage.utms
+	localStorage.clear()
+	localStorage.utms = utms
+	sessionStorage.clear()
+}
+
 export const useConnectWallet = function (): {
 	isReady: boolean,
 	isConnected: boolean,
@@ -74,8 +81,7 @@ export const useConnectWallet = function (): {
 		if (signError) {
 			console.log('signError', signError)
 			disconnect(); close()
-			localStorage.clear()
-			sessionStorage.clear()
+			clearLocalStorage()
 			setTimeout(()=>{
 				window.location.reload()
 			},999)
@@ -86,8 +92,7 @@ export const useConnectWallet = function (): {
 		if (!address || !isConnected) {
 			disconnect()
 			close()
-			localStorage.clear()
-			sessionStorage.clear()
+			clearLocalStorage()
 			setTimeout(()=>{
 				setWeb3modalOpen(true)
 				open()
@@ -106,10 +111,15 @@ export const useConnectWallet = function (): {
 
 	useEffect(() => {
 		if (!signMessageData || !address || !variables?.message) return
+		console.log('localStorage.utms', localStorage.utms)
 		let utms = {}
 		try {
+			console.log('parse')
 			utms = JSON.parse(localStorage.utms)
+			console.log('parsed')
 		} catch {}
+
+		console.log('login utms', utms)
 
         Api.login({
             wallet  : address, 
@@ -158,8 +168,7 @@ export const useConnectWallet = function (): {
 		profile,
 		disconnect: ()=>{
 			disconnect(); close()
-			localStorage.clear()
-			sessionStorage.clear()
+			clearLocalStorage()
 			setTimeout(()=>{
 				window.location.href = '/'
 			}, 1111)

@@ -59,3 +59,10 @@ export const formatAddress = (address: string) => {
     const end = address.slice(-4);
     return `${start}…..${end}`;
 };
+
+
+export const explorerUrls: {[key: number]: string} = {
+	1    : 'https://etherscan.io',
+	56   : 'https://bscscan.com',
+	8453 : 'https://basescan.org/'
+}

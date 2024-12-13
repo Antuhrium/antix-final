@@ -2,7 +2,7 @@ import styles from './StatusModal.module.scss';
 import { useRef, useEffect, useState } from 'react';
 import { useChainId } from 'wagmi';
 import EmailForm from './EmailForm';
-import Link from 'next/link'
+// import Link from 'next/link'
 import { TgIcon } from '@/components/GotQuestions/icons/TgIcon'
 import { useTranslation } from 'react-i18next';
 
